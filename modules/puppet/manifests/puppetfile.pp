@@ -12,7 +12,7 @@ define puppet::puppetfile(
     value => true,
   }
 
-  $update_command = "cd '${directory}' && librarian-puppet update"
+  $update_command = "cd '${directory}' && librarian-puppet update >/dev/null"
 
   file { "${directory}/Puppetfile":
     ensure  => file,
